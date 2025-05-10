@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #0b2f78;
+    color: white;
+    padding: 20px;
+}
+.shapka{
+    font-size: 20px;
+    padding-left: 100px;
+    padding-top: 10px;
+}
+.login{
+    color: green;
+    font-weight: 100px;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.block1{
+    background-image: url("https://app2top.ru/wp-content/uploads/2022/01/steam-10-reviews.jpg");
+    background-size: cover;
+    height: 800px;
+}
+.shapka1{
+    font-size: 10px;
+    padding-left: 100px;
+    padding-top: 10px;
+    margin-top: 0px;
+}
+.block2{
+    display: flex;
+    margin: 0 auto;
+    background-color: aqua;
+    width: 1000px;
+    
+}
+.ap{
+    height: 20px;
+}
+    </style>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1024px-Steam_icon_logo.svg.png" class="logo" alt="">
+        <span class="shapka">Главная</span>
+        <span class="shapka">Библиотека игр</span>
+        <span class="shapka">Друзья</span>
+        <span class="shapka">Поддержка</span>
+        <a href="login.html" class="shapka login">Войти</a>
+        <span id="userName" class="shapka"></span>
+    </header>
+   <div class="block1">
+    <div class="ap"></div>
+
+   <h1 class="text1"></h1>
+   <div class="block2">
+    <span class="shapka1">Магазин</span>
+    <span class="shapka1">Новое и Интересное</span>
+    <span class="shapka1">Категории</span>
+    <span class="shapka1">Новости</span>
+   </div>
+    <div class="Search">
+        <img src="https://img.icons8.com/?size=50&id=132&format=png" alt="pic2">
+        <input type="text" class="text2">
+        <button src="" type="submit"></button>
+        
+    </div>
+   </div>
+
+   </header1>
+   </div>
+
+   <script>
+    const userName = localStorage.getItem("userName")
+    if(userName){
+        document.getElementById("userName").innerText = userName
+        document.getElementById("login").style.display = "none"
+    }
+   </script>
+</body>
+
+</html>

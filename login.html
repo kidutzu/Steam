@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://finevpn.org/wp-content/uploads/2024/02/steam-logo-logo-1024x1024.png" alt="" class="logo">
+    <h2 class="grg">Вход</h2>
+    <form id="loginForm" class="block">
+        <label>Логин:</label>
+        <input type="email" id="userName" class="block1"><br><br>
+        <label>Пароль:</label>
+        <input type="password" id="password">
+        <br><br>
+        <button type="button" onclick="myBtn()">Войти</button>
+        <p id="result"></p>
+        <hr>
+    </form>
+    <script>
+        function myBtn(){
+        let myName = document.getElementById('userName').value    
+        let password = document.getElementById('password').value   
+
+        if (myName === 'admin@gmail.com' && password === "1234"){
+            sessionStorage.setItem("userName", "K1dutzu");
+          window.location.href = "main.html" 
+        }
+        else{
+            document.getElementById("result").innerText = "Fail"
+            }
+        }
+        </script>
+</body>
+</html>
