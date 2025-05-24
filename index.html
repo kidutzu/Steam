@@ -34,7 +34,7 @@ header{
 .block1{
     background-image: url("https://app2top.ru/wp-content/uploads/2022/01/steam-10-reviews.jpg");
     background-size: cover;
-    height: 800px;
+    height: 500px;
 }
 .shapka1{
     font-size: 10px;
@@ -52,6 +52,45 @@ header{
 .ap{
     height: 20px;
 }
+.search{
+    height: 20px;
+}
+.block3{
+    height: 800px;
+    background-color:#0b2f78 ;
+}
+.spisok{
+    padding-left: 50px;
+    color: aliceblue;
+    
+}
+.ttt{
+}
+.eee{
+    height: 50px;
+    padding-top: 40px;
+}
+
+
+.slider {
+      text-align: center;
+      margin-top: 50px;
+      position: absolute;
+      top: 600px;
+      left: 500px;
+    }
+
+    #img {
+      width: 400px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .button1 {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+    }
     </style>
 <body>
     <header>
@@ -72,24 +111,82 @@ header{
     <span class="shapka1">Новое и Интересное</span>
     <span class="shapka1">Категории</span>
     <span class="shapka1">Новости</span>
-   </div>
     <div class="Search">
-        <img src="https://img.icons8.com/?size=50&id=132&format=png" alt="pic2">
+        <img src="https://img.icons8.com/?size=50&id=132&format=png" alt="pic2" class="search">
         <input type="text" class="text2">
         <button src="" type="submit"></button>
         
     </div>
    </div>
-
-   </header1>
+    
    </div>
 
+   </header>
+   </div>
+
+   <div class="block3">
+    <div class="spisok">
+        <img src="https://store.fastly.steamstatic.com/public/images//gift/steamcards_promo_03.png?v=1" alt="" class="eee">
+    <h5 class="ttt">Рекомендуется</h5>
+    <li>Друзьями</li>
+    <li>Кураторами</li>
+    <li>По меткам</li>
+    <h6>Категории</h6>
+    <li>Лидеры продаж</li>
+    <li>Новинки</li>
+    <li>Скоро выйдут</li>
+    <li>Скидки</li>
+    <h4>Жанры игр</h4>
+    <li>Бесплатные</li>
+    <li>Ранний доступ</li>
+    <li>Гонки</li>
+    <li>Казуальная игра</li>
+    <li>Приключения</li>
+    <li>Экшен</li>
+    <li>Симулятор</li>
+    <li>Шутеры</li>
+   </div>
+
+<div class="slider">
+  <button onclick="prevSlide()" class="button1">←</button>
+  <img id="slide" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1747389753" alt="">
+  <button onclick="nextSlide()" class="button1">→</button>
+</div>
+</div>
+
+</div> 
+
+   
    <script>
-    const userName = localStorage.getItem("userName")
+    const userName = sessionStorage.getItem("userName")
     if(userName){
         document.getElementById("userName").innerText = userName
         document.getElementById("login").style.display = "none"
     }
+
+
+    
+  const images = [
+    "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172470/b7e2d0c4b5f34b6751269c359070f706ff6d59fe/header.jpg?t=1746554828",
+    "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3017860/header.jpg?t=1747409289",
+    "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2183900/b218028e3a2901985b54ea27e4627209bb78039c/header_alt_assets_6.jpg?t=1747932217"
+  ];
+
+  let index = 0;
+
+  function showSlide() {
+    document.getElementById("slide").src = images[index];
+    }
+
+  function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    showSlide();
+  }
+
+  function nextSlide() {
+    index = (index + 1) % images.length;
+    showSlide();
+  }
    </script>
 </body>
 
